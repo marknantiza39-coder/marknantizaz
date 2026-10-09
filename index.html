@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mark John Ally Nantiza — Developer Portfolio</title>
+  <title>Mark John Ally Nantiza — IT Professional & Web Developer</title>
   <style>
     /* RESET & BASE STYLES */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #0f172a;
+      background-color: #0b0f19;
       color: #e2e8f0;
       line-height: 1.6;
     }
@@ -19,7 +19,7 @@
     header {
       position: fixed;
       top: 0; width: 100%;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(11, 15, 25, 0.9);
       backdrop-filter: blur(8px);
       z-index: 1000;
       border-bottom: 1px solid #1e293b;
@@ -32,9 +32,9 @@
       justify-content: space-between;
       align-items: center;
     }
-    .logo { font-size: 1.25rem; font-weight: 700; color: #38bdf8; text-decoration: none; }
+    .logo { font-size: 1.25rem; font-weight: 700; color: #38bdf8; text-decoration: none; font-family: monospace; }
     .nav-links { display: flex; list-style: none; gap: 1.5rem; }
-    .nav-links a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+    .nav-links a { color: #94a3b8; text-decoration: none; transition: color 0.2s; font-size: 0.95rem; }
     .nav-links a:hover { color: #38bdf8; }
 
     /* LAYOUT CONTAINERS */
@@ -56,14 +56,14 @@
       justify-content: center;
       padding-top: 7rem;
     }
-    .hero-greeting { color: #38bdf8; font-size: 1.2rem; margin-bottom: 0.5rem; }
-    .hero-name { font-size: 3rem; font-weight: 800; color: #f8fafc; }
+    .hero-greeting { color: #38bdf8; font-size: 1.2rem; margin-bottom: 0.5rem; font-family: monospace; }
+    .hero-name { font-size: 3.2rem; font-weight: 800; color: #f8fafc; }
     .hero-subtitle { font-size: 1.5rem; color: #94a3b8; margin-bottom: 1.5rem; }
     .btn {
       display: inline-block;
       padding: 0.75rem 1.5rem;
       background: #38bdf8;
-      color: #0f172a;
+      color: #0b0f19;
       font-weight: 600;
       border-radius: 6px;
       text-decoration: none;
@@ -88,33 +88,54 @@
     }
     .skill-card {
       background: #1e293b;
-      padding: 1rem;
+      padding: 1.25rem 1rem;
       border-radius: 6px;
       text-align: center;
       border: 1px solid #334155;
-      font-weight: 500;
+      font-weight: 600;
       color: #38bdf8;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .skill-card:hover {
+      transform: translateY(-3px);
+      border-color: #38bdf8;
     }
 
-    /* PROJECTS SECTION */
+    /* PROJECTS & ACHIEVEMENTS SECTION */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.5rem;
     }
     .project-card {
       background: #1e293b;
-      padding: 1.5rem;
+      padding: 1.75rem;
       border-radius: 8px;
       border: 1px solid #334155;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-    .project-title { font-size: 1.25rem; color: #f8fafc; margin-bottom: 0.5rem; }
+    .project-card.featured {
+      border: 1px solid #38bdf8;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.1);
+    }
+    .featured-badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+      width: fit-content;
+    }
+    .project-title { font-size: 1.35rem; color: #f8fafc; margin-bottom: 0.5rem; }
     .project-desc { color: #94a3b8; font-size: 0.95rem; margin-bottom: 1rem; }
     .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
-    .tag { background: #0f172a; color: #38bdf8; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; }
+    .tag { background: #0b0f19; color: #38bdf8; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
     .project-links a { color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
 
     /* CONTACT SECTION */
@@ -143,11 +164,11 @@
   <!-- NAVBAR -->
   <header>
     <nav>
-      <a href="#hero" class="logo">MN.dev</a>
+      <a href="#hero" class="logo">mark_nantiza.dev</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Work & Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -155,9 +176,9 @@
 
   <!-- HERO SECTION -->
   <section id="hero">
-    <p class="hero-greeting">Hi, my name is</p>
-    <h1 class="hero-name">Mark John Ally Nantiza.</h1>
-    <h3 class="hero-subtitle">I build simple, functional web solutions.</h3>
+    <p class="hero-greeting">&gt; Hello World, I am</p>
+    <h1 class="hero-name">Mark John Ally Nantiza</h1>
+    <h3 class="hero-subtitle">IT Professional &amp; Full-Stack Web Developer</h3>
     <a href="#projects" class="btn">View My Work</a>
   </section>
 
@@ -165,55 +186,63 @@
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <div class="about-box">
-      <p>I am a developer interested in web technologies, clean design, and problem solving. I focus on creating responsive, efficient websites and applications using modern web tools.</p>
+      <p>I am an IT Professional specialized in developing scalable web applications, handling custom server backends, and crafting clean, responsive user experiences. With a strong baseline in fundamental system logic (C++, Python) and dynamic web architecture (PHP, JavaScript), I focus on building reliable software solutions.</p>
     </div>
   </section>
 
   <!-- SKILLS SECTION -->
   <section id="skills">
-    <h2 class="section-title">Skills & Tools</h2>
+    <h2 class="section-title">Technical Skills</h2>
     <div class="skills-grid">
+      <div class="skill-card">PHP</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">C++</div>
       <div class="skill-card">HTML5</div>
       <div class="skill-card">CSS3</div>
-      <div class="skill-card">JavaScript</div>
       <div class="skill-card">Git / GitHub</div>
-      <div class="skill-card">Responsive Design</div>
-      <div class="skill-card">Vercel</div>
+      <div class="skill-card">Web Hosting</div>
     </div>
   </section>
 
-  <!-- PROJECTS SECTION -->
+  <!-- PROJECTS & ACHIEVEMENTS SECTION -->
   <section id="projects">
-    <h2 class="section-title">Featured Projects</h2>
+    <h2 class="section-title">Key Work &amp; Achievements</h2>
     <div class="projects-grid">
-      <div class="project-card">
-        <div>
-          <h3 class="project-title">Personal Portfolio Website</h3>
-          <p class="project-desc">A minimalist developer portfolio constructed with semantic HTML and CSS, designed to showcase projects and contact details clean and efficiently.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">GitHub Pages</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="#">Source Code &rarr;</a>
-        </div>
-      </div>
 
-      <div class="project-card">
+      <!-- FEATURED PROJECT: LUNARMOON -->
+      <div class="project-card featured">
         <div>
-          <h3 class="project-title">Web Application Demo</h3>
-          <p class="project-desc">A light front-end application built to test responsive styling, dynamic interactions, and API integration concepts.</p>
+          <span class="featured-badge">Featured Work</span>
+          <h3 class="project-title">Lunarmoon Website</h3>
+          <p class="project-desc">Designed, engineered, and maintained the web presence for <strong>Lunarmoon</strong>. Implemented custom web functionality, performance optimizations, and structured layouts to ensure smooth dynamic site operations.</p>
           <div class="project-tags">
+            <span class="tag">PHP</span>
             <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
             <span class="tag">CSS3</span>
           </div>
         </div>
         <div class="project-links">
+          <a href="#">View Details &rarr;</a>
+        </div>
+      </div>
+
+      <!-- ADDITIONAL IT / CODING WORK -->
+      <div class="project-card">
+        <div>
+          <h3 class="project-title">System & Automation Scripts</h3>
+          <p class="project-desc">Developed algorithmic tools and automation routines utilizing Python and C++ logic for data processing, basic systems scripting, and application execution.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+          </div>
+        </div>
+        <div class="project-links">
           <a href="#">Source Code &rarr;</a>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -236,7 +265,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Mark John Ally Nantiza. Built and hosted on GitHub.</p>
+    <p>&copy; 2026 Mark John Ally Nantiza. All rights reserved.</p>
   </footer>
 
 </body>
