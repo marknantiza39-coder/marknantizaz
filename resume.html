@@ -147,4 +147,164 @@ a{color:inherit;text-decoration:none;border:0!important}
 <div>
 <p class="status" data-r style="--i:1"><i></i>Open to junior roles and internships</p>
 <h1 data-r style="--i:2">Mark John Ally Nantiza</h1>
-<p class="role" id="role" data-r style="--i:3">BS
+<p class="role" id="role" data-r style="--i:3">BS Information Technology · Aspiring junior web developer</p>
+<div class="meta-row" data-r style="--i:4">
+<span>Paranaque City, Philippines</span>
+<a href="mailto:marknantiza56@gmail.com">marknantiza56@gmail.com</a>
+<button class="mini" id="mail" type="button" aria-label="Copy email address">copy</button>
+<a href="index.html">Portfolio</a>
+<!-- To show a phone number, add: <span>09XX XXX XXXX</span> -->
+</div>
+</div>
+</header>
+
+<details class="sec" id="profile" open>
+<summary><span class="no">01</span><h2>Profile</h2></summary>
+<div class="body"><p class="pp">Fresh Information Technology graduate from Datamex College of Saint Adeline with hands-on experience building web systems and designing databases. Reliable and quick to learn, with customer-facing work experience that built strong communication and multitasking skills. Seeking a junior developer role where I can grow and contribute to real projects.</p></div>
+</details>
+
+<details class="sec" id="education" open>
+<summary><span class="no">02</span><h2>Education</h2></summary>
+<div class="body">
+<div class="row"><h3>BS Information Technology</h3><time>2023–2027</time><p class="meta">Datamex College of Saint Adeline, Parañaque City</p></div>
+<div class="row"><h3>Senior High School</h3><time>2020–2022</time><p class="meta">AZGH College Inc.</p></div>
+<div class="row"><h3>High School</h3><time>2016–2020</time><p class="meta">Las Piñas National High School</p></div>
+</div>
+</details>
+
+<details class="sec" id="experience" open>
+<summary><span class="no">03</span><h2>Work experience</h2></summary>
+<div class="body">
+<div class="row"><h3>Kitchen Helper</h3><time>Jun–Dec 2024</time><p class="meta">12 Korean Grill House</p></div>
+<div class="row"><h3>Service Crew</h3><time>Mar–Jun 2023</time><p class="meta">Jollibee SM Sucat</p></div>
+<div class="row"><h3>Service Crew</h3><time>Apr 2022–Feb 2023</time><p class="meta">Jollibee NAIA Terminal 2</p></div>
+</div>
+</details>
+
+<details class="sec" id="skills" open>
+<summary><span class="no">04</span><h2>Skills</h2></summary>
+<div class="body">
+<div class="grp"><span class="lbl">frontend</span><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
+<div class="grp"><span class="lbl">backend / data</span><ul class="chips"><li>PHP</li><li>Python</li><li>SQL</li><li>MySQL</li></ul></div>
+<div class="grp"><span class="lbl">tools</span><ul class="chips"><li>Git &amp; GitHub</li></ul></div>
+<div class="grp"><span class="lbl">personal</span><ul class="chips"><li>Quick learner</li><li>Communication</li><li>Responsible</li><li>Multitasking</li><li>Team player</li></ul></div>
+</div>
+</details>
+
+<details class="sec" id="certificates" open>
+<summary><span class="no">05</span><h2>Seminars and certificates</h2></summary>
+<div class="body">
+<div class="row"><h3>AI in Cybersecurity</h3><button class="ib" type="button" data-full="images/cert-ai-cybersecurity.jpg" data-alt="Certificate of Participation for the AI in Cybersecurity webinar">View</button><p class="meta">Online webinar · Ethel Programming Computer Programming Services · August 8, 2026</p></div>
+<div class="row"><h3>Digital Fortify: Where Shaping the Future Trends &amp; Safety Collide</h3><button class="ib" type="button" data-full="images/cert-digital-fortify.jpg" data-alt="Certificate of Participation for the Digital Fortify seminar">View</button><p class="meta">Seminar · Datamex College of Saint Adeline · November 24, 2023</p></div>
+</div>
+</details>
+
+<details class="sec" id="references" open>
+<summary><span class="no">06</span><h2>References</h2></summary>
+<div class="body"><p class="pp">Available upon request.</p></div>
+</details>
+
+<footer class="foot">
+<span>© <span id="yr">2026</span> Mark Nantiza</span>
+<span>Shortcuts: <kbd>T</kbd> theme · <kbd>P</kbd> print · <kbd>C</kbd> copy email · <kbd>E</kbd> expand or collapse</span>
+</footer>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog id="lb" aria-label="Certificate preview"><img id="lb-img" alt=""><button class="ib" type="button" id="lb-close">Close</button></dialog>
+
+<script>
+(function(){
+  /* ---- settings: edit these ---- */
+  var EMAIL="marknantiza56@gmail.com";
+  var NAME="Mark John Ally Nantiza";
+  var LOCATION="Paranaque City, Philippines";
+  /* ------------------------------ */
+  var $=function(id){return document.getElementById(id)};
+  var root=document.documentElement;
+  var dets=[].slice.call(document.querySelectorAll("details.sec"));
+  $("yr").textContent=new Date().getFullYear();
+
+  function toast(t){var el=$("toast");el.textContent=t;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(function(){el.classList.remove("show")},2200)}
+  function copy(text,msg){
+    try{navigator.clipboard.writeText(text).then(function(){toast(msg)},function(){toast("Copy failed")})}catch(e){toast("Copy failed")}
+  }
+
+  /* theme */
+  function toggleTheme(){
+    var dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);
+    var n=dark?"light":"dark";root.setAttribute("data-theme",n);
+    try{localStorage.setItem("theme",n)}catch(e){}
+  }
+  $("theme").addEventListener("click",toggleTheme);
+
+  /* print: open every section first, then restore */
+  var was=[];
+  addEventListener("beforeprint",function(){was=dets.map(function(d){return d.open});dets.forEach(function(d){d.open=true})});
+  addEventListener("afterprint",function(){dets.forEach(function(d,i){d.open=was[i]})});
+  function doPrint(){window.print()}
+  $("print").addEventListener("click",doPrint);
+
+  /* expand / collapse all */
+  var fold=$("fold");
+  function sync(){fold.textContent=dets.every(function(d){return d.open})?"Collapse all":"Expand all"}
+  function toggleFold(){var all=dets.every(function(d){return d.open});dets.forEach(function(d){d.open=!all});sync()}
+  fold.addEventListener("click",toggleFold);
+  dets.forEach(function(d){d.addEventListener("toggle",sync)});
+
+  /* copy email and copy resume as plain text */
+  function copyEmail(){copy(EMAIL,"Email copied")}
+  $("mail").addEventListener("click",copyEmail);
+  $("copytxt").addEventListener("click",function(){
+    var L=[NAME.toUpperCase(),$("role").textContent,LOCATION+" | "+EMAIL,""];
+    dets.forEach(function(d){
+      L.push(d.querySelector("h2").textContent.toUpperCase());
+      d.querySelectorAll(".row,.grp,.pp").forEach(function(el){
+        if(el.matches(".row")){
+          var tm=el.querySelector("time");
+          L.push("- "+el.querySelector("h3").textContent+", "+el.querySelector(".meta").textContent+(tm?" ("+tm.textContent+")":""));
+        }else if(el.matches(".grp")){
+          L.push(el.querySelector(".lbl").textContent+": "+[].map.call(el.querySelectorAll("li"),function(li){return li.textContent}).join(", "));
+        }else L.push(el.textContent.trim());
+      });
+      L.push("");
+    });
+    copy(L.join("\n").trim(),"Resume copied as plain text");
+  });
+
+  /* section links open a collapsed section before scrolling */
+  $("nav").addEventListener("click",function(e){
+    var a=e.target.closest("a");if(!a)return;
+    var d=document.querySelector(a.getAttribute("href"));if(d&&d.tagName==="DETAILS")d.open=true;
+  });
+
+  /* scroll spy, reveal on view, progress bar */
+  var links=[].slice.call($("nav").querySelectorAll("a"));
+  var spy=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting)links.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id)})
+  })},{rootMargin:"-30% 0px -60% 0px"});
+  dets.forEach(function(d){spy.observe(d)});
+  var prog=$("progress");
+  function onScroll(){var h=root.scrollHeight-innerHeight;prog.style.transform="scaleX("+(h>0?scrollY/h:0)+")"}
+  addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+  /* certificate viewer */
+  var lb=$("lb"),img=$("lb-img");
+  document.querySelectorAll("[data-full]").forEach(function(b){b.addEventListener("click",function(){
+    if(!lb.showModal){window.open(b.dataset.full,"_blank");return}
+    img.onerror=function(){lb.close();toast("Certificate image not found. Upload it to the images folder.")};
+    img.src=b.dataset.full;img.alt=b.dataset.alt;lb.showModal();
+  })});
+  $("lb-close").addEventListener("click",function(){lb.close()});
+  lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+
+  /* keyboard shortcuts */
+  addEventListener("keydown",function(e){
+    if(e.ctrlKey||e.metaKey||e.altKey||lb.open)return;
+    var k=e.key.toLowerCase();
+    if(k==="t")toggleTheme();else if(k==="p")doPrint();else if(k==="c")copyEmail();else if(k==="e")toggleFold();
+  });
+})();
+</script>
+</body>
+</html>
