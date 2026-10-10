@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /* ---- settings: edit these ---- */
-const TO_EMAIL        = 'marknantiza39@gmail.com';      // where messages are delivered
+const TO_EMAIL        = 'marknantiza56@gmail.com';      // where messages are delivered
 const FROM_EMAIL      = 'no-reply@yourdomain.com';      // must be an address on YOUR hosting domain, or mail may be blocked
 const SITE_NAME       = 'Mark Nantiza Portfolio';
 const ALLOWED_ORIGINS = [];                             // e.g. ['https://your-username.github.io'] if the page lives on GitHub Pages. Empty = same-site only
