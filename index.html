@@ -3,13 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Your Name – IT Graduate Portfolio</title>
-<meta name="description" content="Portfolio of Your Name, a fresh IT graduate and aspiring web developer.">
-<meta property="og:title" content="Your Name – IT Graduate Portfolio">
+<title>Mark Nantiza – IT Graduate Portfolio</title>
+<meta name="description" content="Portfolio of Mark Nantiza, a fresh IT graduate and aspiring web developer from Paranaque City, Philippines.">
+<meta property="og:title" content="Mark Nantiza – IT Graduate Portfolio">
 <meta property="og:description" content="Web projects, skills and contact details of a fresh IT graduate.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#fafafa">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mark John Ally Nantiza","jobTitle":"Junior Web Developer","alumniOf":"Datamex College of Saint Adeline","address":{"@type":"PostalAddress","addressLocality":"Paranaque City","addressCountry":"PH"}}</script>
 <style>
 :root{--bg:#fafafa;--card:#fff;--ink:#18181b;--mute:#6b7280;--line:#e5e7eb;--accent:#2f5bea;--accent-ink:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e10;--card:#17171a;--ink:#f4f4f5;--mute:#a1a1aa;--line:#27272a;--accent:#7b9bff;--accent-ink:#0e0e10}}
@@ -105,6 +110,13 @@ h2{font-size:28px;margin-bottom:8px}
 .form input:focus,.form textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
 .form [aria-invalid="true"]{border-color:#e5484d}
 .err{color:#e5484d;font-size:13px;min-height:1em;margin:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.count{color:var(--mute);font-size:12px;font-weight:400;justify-self:end}
+.status{margin:0;font-size:14px;min-height:1.4em;color:var(--mute)}
+.status.ok{color:#16a34a}.status.fail{color:#e5484d}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
+.shot{aspect-ratio:16/10;border-radius:8px;overflow:hidden;border:1px solid var(--line);margin-bottom:16px;background:var(--bg)}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:30}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 footer{padding:36px 0;border-top:1px solid var(--line);color:var(--mute);font-size:13px;text-align:center}
@@ -147,7 +159,7 @@ nav.open{display:flex}
 </div>
 </div>
 <!-- Add your photo as profile.jpg in the same folder as index.html -->
-<div class="photo" data-r style="--i:4"><span>YN</span><img src="profile.jpg" alt="Photo of Your Name" onerror="this.remove()"></div>
+<div class="photo" data-r style="--i:4"><span>MN</span><img src="profile.jpg" alt="Photo of Mark Nantiza" width="280" height="280" fetchpriority="high" onerror="this.remove()"></div>
 </div>
 
 <section id="about"><div class="wrap">
@@ -167,7 +179,7 @@ nav.open{display:flex}
 <dt>Based in</dt><dd>Paranaque City, Philippines</dd>
 <dt>Focus</dt><dd>Web development, databases</dd>
 <dt>Status</dt><dd>Open to junior and internship roles</dd>
-<dt>Email</dt><dd><a href="mailto:you@example.com">marknantizaz39@gmail.com</a></dd>
+<dt>Email</dt><dd><a href="mailto:marknantiza39@gmail.com">marknantiza39@gmail.com</a></dd>
 </dl>
 </div>
 </div></section>
@@ -201,15 +213,15 @@ nav.open{display:flex}
 </div>
 <div class="projects">
 <article class="project" data-cat="web data">
-<div><h3>Capstone: [System Name]</h3><ul class="tags"><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul></div>
+<div><div class="shot"><img src="images/capstone.jpg" alt="Screenshot of the capstone project" loading="lazy" onerror="this.parentNode.remove()"></div><h3>Capstone: [System Name]</h3><ul class="tags"><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul></div>
 <div><p>[Describe the problem it solves, who uses it, and your role in the team. Example: A web-based enrollment system that replaced paper forms for 300 students.]</p><div class="btns"><a class="btn main" href="#">Live demo</a><a class="btn" href="#">GitHub</a></div></div>
 </article>
 <article class="project" data-cat="web">
-<div><h3>Personal portfolio</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
+<div><div class="shot"><img src="images/portfolio.jpg" alt="Screenshot of this portfolio" loading="lazy" onerror="this.parentNode.remove()"></div><h3>Personal portfolio</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
 <div><p>[The site you're on now. Mention that it's responsive, supports dark mode, and is hosted on GitHub Pages.]</p><div class="btns"><a class="btn main" href="#">Live site</a><a class="btn" href="#">GitHub</a></div></div>
 </article>
 <article class="project" data-cat="data">
-<div><h3>[Project name]</h3><ul class="tags"><li>Python</li><li>SQL</li></ul></div>
+<div><div class="shot"><img src="images/project3.jpg" alt="Screenshot of the project" loading="lazy" onerror="this.parentNode.remove()"></div><h3>[Project name]</h3><ul class="tags"><li>Python</li><li>SQL</li></ul></div>
 <div><p>[A school or personal project: an inventory tracker, data report, or small API. Say what it does and what you learned.]</p><div class="btns"><a class="btn main" href="#">Live demo</a><a class="btn" href="#">GitHub</a></div></div>
 </article>
 </div>
@@ -219,7 +231,7 @@ nav.open{display:flex}
 <h2>Education and certifications</h2>
 <p class="sub">Where I studied and what I've completed.</p>
 <div class="timeline">
-<h3>BS Information Technology</h3><p>[Your University] · [Start year]–[Graduation year]</p>
+<h3>BS Information Technology</h3><p>Datamex College of Saint Adeline · [Start year]–[Graduation year]</p>
 <h3>[Certification or short course]</h3><p>[Provider, e.g. freeCodeCamp, Coursera, Cisco] · [Year]</p>
 <h3>[Internship or OJT, if any]</h3><p>[Company] · [What you worked on]</p>
 </div>
@@ -230,7 +242,7 @@ nav.open{display:flex}
 <p class="sub">I'm available for junior developer roles and internships.</p>
 <div class="contact-grid">
 <div class="btns" style="flex-direction:column;align-items:flex-start">
-<a class="btn main" href="mailto:you@example.com">Email me</a>
+<a class="btn main" href="mailto:marknantiza39@gmail.com">Email me</a>
 <button class="btn" id="copy" type="button">Copy email address</button>
 <a class="btn" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
 <a class="btn" href="https://linkedin.com/in/your-name" target="_blank" rel="noopener">LinkedIn</a>
@@ -238,8 +250,11 @@ nav.open{display:flex}
 <form class="form" id="form" novalidate>
 <label>Name<input id="n" name="name" autocomplete="name" required><p class="err" id="en"></p></label>
 <label>Email<input id="e" name="email" type="email" autocomplete="email" required><p class="err" id="ee"></p></label>
-<label>Message<textarea id="m" name="message" rows="4" required></textarea><p class="err" id="em"></p></label>
-<button class="btn main" type="submit">Send message</button>
+<label>Message<textarea id="m" name="message" rows="4" maxlength="1000" required></textarea><p class="err" id="em"></p><small class="count" id="count">0 / 1000</small></label>
+<div class="hp" aria-hidden="true"><label>Leave this empty<input id="hp" name="website" tabindex="-1" autocomplete="off"></label></div>
+<input type="hidden" id="ts" name="ts">
+<button class="btn main" id="send" type="submit">Send message</button>
+<p class="status" id="status" role="status" aria-live="polite"></p>
 </form>
 </div>
 </div></section>
@@ -253,6 +268,8 @@ nav.open{display:flex}
 (function(){
   /* ---- settings: edit these ---- */
   var EMAIL="marknantiza39@gmail.com";
+  /* contact.php needs PHP hosting. Use a full URL if it lives on another site. On GitHub Pages the form falls back to your email app. Set to "" to always use the email app. */
+  var FORM_ENDPOINT="contact.php";
   var ROLES=["web apps","databases","clean interfaces","useful tools"];
   /* ------------------------------ */
   var $=function(id){return document.getElementById(id)};
@@ -274,6 +291,7 @@ nav.open{display:flex}
   var nav=$("nav"),menu=$("menu");
   menu.addEventListener("click",function(){var o=nav.classList.toggle("open");menu.setAttribute("aria-expanded",o)});
   nav.addEventListener("click",function(){nav.classList.remove("open");menu.setAttribute("aria-expanded","false")});
+  addEventListener("keydown",function(e){if(e.key==="Escape"){nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}});
 
   /* active link */
   var links=[].slice.call(nav.querySelectorAll("a"));
@@ -333,7 +351,9 @@ nav.open{display:flex}
     try{navigator.clipboard.writeText(EMAIL).then(ok,function(){toast(EMAIL)})}catch(e){toast(EMAIL)}
   });
 
-  /* contact form (opens the visitor's email app) */
+  /* contact form: sends through contact.php when available, otherwise opens the visitor's email app */
+  $("ts").value=Date.now();
+  $("m").addEventListener("input",function(){$("count").textContent=this.value.length+" / 1000"});
   function bad(f,m,msg){$(f).setAttribute("aria-invalid",!!msg);$(m).textContent=msg||"";return !!msg}
   $("form").addEventListener("submit",function(ev){
     ev.preventDefault();
@@ -342,8 +362,21 @@ nav.open{display:flex}
            bad("e","ee",/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)?"":"Please enter a valid email."),
            bad("m","em",m.length>=10?"":"Please write at least 10 characters.")];
     if(x.some(Boolean))return;
-    location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Portfolio message from "+n)+"&body="+encodeURIComponent(m+"\n\n"+n+" ("+e+")");
-    toast("Opening your email app...");
+    var btn=$("send"),st=$("status");
+    function mailto(){
+      location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Portfolio message from "+n)+"&body="+encodeURIComponent(m+"\n\n"+n+" ("+e+")");
+      st.className="status";st.textContent="Opening your email app...";
+    }
+    if(!FORM_ENDPOINT){mailto();return}
+    btn.disabled=true;st.className="status";st.textContent="Sending...";
+    fetch(FORM_ENDPOINT,{method:"POST",body:new FormData($("form")),headers:{"Accept":"application/json"}})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.ok,j:j}})})
+      .then(function(res){
+        if(res.ok){st.className="status ok";st.textContent="Thanks! Your message was sent.";$("form").reset();$("ts").value=Date.now();$("count").textContent="0 / 1000";toast("Message sent")}
+        else{st.className="status fail";st.textContent=res.j.error||"Something went wrong. Please try again."}
+      })
+      .catch(mailto) /* no PHP on this host (for example GitHub Pages): use the email app instead */
+      .then(function(){btn.disabled=false});
   });
 
   /* background: minimalist dot grid that reacts to cursor, taps and scroll */
