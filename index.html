@@ -145,6 +145,13 @@ h2{font-size:clamp(36px,4.8vw,54px);margin-bottom:10px}
 .cert-body h3{font-size:25px;margin-bottom:8px}
 .cert-body .meta{margin:0 0 10px;color:var(--accent);font:500 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase}
 .cert-body p:last-child{margin:0;color:var(--mute)}
+.evid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.ev{display:block;padding:24px;border:1px solid var(--line);background:var(--card);border-radius:2px;text-decoration:none;color:var(--ink);transition:border-color .25s,transform .25s}
+.ev:hover{border-color:var(--accent);transform:translateY(-3px)}
+.ev-step{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.ev h3{font-size:27px;margin:8px 0}
+.ev p{color:var(--mute);font-size:15.5px;margin:0 0 16px}
+.ev-go{font:600 11.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start}
 .form{padding:28px;display:grid;gap:16px}
 .form label{display:grid;gap:6px;font:500 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase}
@@ -166,7 +173,7 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mute);font:40
 .top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--card);opacity:0;pointer-events:none;transition:opacity .25s,transform .2s,border-color .2s}
 .top.show{opacity:1;pointer-events:auto}
 
-@media (max-width:940px){
+@media (max-width:1040px){
 .menu-btn{display:block}
 nav{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 24px}
 nav.open{display:flex}
@@ -186,7 +193,7 @@ section{padding:60px 0}
 <header><div class="wrap bar">
 <a class="logo" href="#top">Mark John Ally Nantiza</a>
 <nav id="nav" aria-label="Main">
-<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#certificates">Certificates</a><a href="resume.html">Resume</a><a href="#contact">Contact</a>
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#certificates">Certificates</a><a href="#evidence">Evidence</a><a href="resume.html">Resume</a><a href="#contact">Contact</a>
 </nav>
 <button class="icon-btn" id="theme" aria-label="Switch light or dark theme">◐</button>
 <button class="icon-btn menu-btn" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
@@ -312,8 +319,20 @@ section{padding:60px 0}
 </div>
 </div></section>
 
+<section id="evidence"><div class="wrap">
+<p class="eyebrow">06 · Evidence</p>
+<h2>Industry-ready evidence</h2>
+<p class="sub">Supporting pages for my industry-ready portfolio: a security case study, my AI usage record, and my interview preparation.</p>
+<div class="evid">
+<a class="ev" href="cybersecurity.html"><span class="ev-step">Step 18</span><h3>Cybersecurity case</h3><p>SQL injection explained: how it happens, the risks, and how developers prevent it.</p><span class="ev-go">Open page →</span></a>
+<a class="ev" href="ai-literacy.html"><span class="ev-step">Step 19</span><h3>AI literacy</h3><p>My AI usage log and what I verified, learned, and found limiting.</p><span class="ev-go">Open page →</span></a>
+<a class="ev" href="technical-interview.html"><span class="ev-step">Step 20</span><h3>Technical interview</h3><p>A study guide across six areas, with practical problem-solving examples.</p><span class="ev-go">Open page →</span></a>
+<a class="ev" href="mock-interview.html"><span class="ev-step">Step 21</span><h3>Mock interview</h3><p>My prepared answers, with a practice mode and timer.</p><span class="ev-go">Open page →</span></a>
+</div>
+</div></section>
+
 <section id="contact"><div class="wrap">
-<p class="eyebrow">06 · Contact</p>
+<p class="eyebrow">07 · Contact</p>
 <h2>Let's work together</h2>
 <p class="sub">I'm available for junior developer roles and internships.</p>
 <div class="contact-grid">
