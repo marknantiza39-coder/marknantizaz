@@ -168,6 +168,11 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mute);font:40
 .top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--card);opacity:0;pointer-events:none;transition:opacity .25s,transform .2s,border-color .2s}
 .top.show{opacity:1;pointer-events:auto}
 
+/* Video Wrapper Styles Added */
+.video-card{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:24px;margin-top:20px}
+.video-container{position:relative;width:100%;aspect-ratio:16/9;background:var(--ink);border-radius:2px;overflow:hidden;margin-bottom:16px;border:1px solid var(--line)}
+.video-container video{width:100%;height:100%;object-fit:cover;display:block}
+
 @media (max-width:1040px){
 .menu-btn{display:block}
 nav{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 24px}
@@ -335,8 +340,29 @@ body{font-size:12px}
 </article>
 </div></section>
 
+<!-- ADDED VIDEO PLACEHOLDER SECTION -->
 <section><div class="wrap">
-<p class="eyebrow">02 · Tips</p>
+<p class="eyebrow">02 · Video Recording</p>
+<h2>Watch my mock interview</h2>
+<p class="sub">A video recording of my simulated interview response.</p>
+<div class="video-card" style="background:var(--card);border:1px solid var(--line);border-radius:2px;padding:24px;margin-top:20px">
+  <div class="video-container" style="position:relative;width:100%;aspect-ratio:16/9;background:var(--ink);border-radius:2px;overflow:hidden;margin-bottom:16px;border:1px solid var(--line)">
+    <!-- 
+      INSTRUCTIONS: Put your video file in your repo (e.g. mock-interview.mp4) 
+      and change the src path below.
+    -->
+    <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block">
+      <source src="videos/mock-interview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <h3>Self-Simulation Video</h3>
+  <p style="color:var(--mute);margin:0">Recorded video demonstrating delivery and confidence during the interview.</p>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<p class="eyebrow">03 · Tips</p>
 <h2>Interview tips I follow</h2>
 <div class="cards">
 <article class="card"><h3>Present, past, future</h3><p>For "Tell me about yourself," start with who I am now, then what I have done, then what I want next. Aim for 60 to 90 seconds.</p></article>
